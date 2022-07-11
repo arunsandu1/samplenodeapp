@@ -16,6 +16,9 @@ jobs:
     strategy:
       matrix:
         os: [self-hosted]
+        ## if custom-runner is not available, use default runners
+#         os: [macos-latest, windows-latest, ubuntu-18.04]
+
         node-version: [12.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/ 
         include:
