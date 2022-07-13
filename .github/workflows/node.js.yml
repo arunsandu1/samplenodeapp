@@ -1,4 +1,4 @@
-name: build
+name: My builds test
 
 on: push
 #   push:
@@ -33,6 +33,14 @@ jobs:
       - name: my second job
         if: success()
         run: echo "The previous step has finished successfully!!"
+        
+      - name: my third step
+        uses: actions/checkout@v2
+        with:
+          node-version: 12
+          registry-url: https:///npm.pkg.github.com/
+        
+  
         
 #     - uses: actions/checkout@v2
 #     - name: Use Node.js ${{ matrix.node-version }}
